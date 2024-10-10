@@ -52,7 +52,7 @@ jobs:
 
     # JMeter test plan to execute
 
-              test-plan-path: './CLASS9FRIENDSTOSUPPORT 1.jmx'
+              test-plan-path: './CLASS9FRIENDSTOSUPPORT 1 1.jmx'
 
       - name: Upload Results
 
