@@ -53,14 +53,29 @@ jobs:
     # JMeter test plan to execute
 
               test-plan-path: './CLASS9FRIENDSTOSUPPORT 1 1.jmx'
+              
 
-      - name: Upload Results
+      # Step 2: Run a build or test (replace with your build/test command)
+      - name: Run a sample script or test
+        run: |
+          mkdir output
+          echo "This is a test output" > output/result.txt
 
-        uses: actions/upload-artifact@v4
-
+      # Step 3: Upload artifact
+      - name: Upload result artifact
+        uses: actions/upload-artifact@v3
         with:
+          name: test-results
+          path: output/result.txt
 
-         name: jmeter-results
+
+      #- name: Upload Results
+
+        #uses: actions/upload-artifact@v4
+
+       # with:
+
+         #name: jmeter-results
 
          path: result.jtl
  
